@@ -11,20 +11,20 @@ import {setTextFilter} from './actions/filters';
 import 'react-dates/lib/css/_datepicker.css';
 
 const store = configureStore();
-store.dispatch(addExpense({description: 'Water Bill', note: 'Fixed', amount: 4500 }));
+/*store.dispatch(addExpense({description: 'Water Bill', note: 'Fixed', amount: 4500 }));
 store.dispatch(addExpense({description: 'Gas Bill', note: 'Fixed', createdAt: 1000 }));
-store.dispatch(addExpense({description: 'Rent', note: 'Fixed', amount: 288000 }));
+store.dispatch(addExpense({description: 'Rent', note: 'Fixed', amount: 288000 }));*/
 /*store.dispatch(setTextFilter('water'));
 
 setTimeout(() => {
     store.dispatch(setTextFilter('bill'));
 }, 3000);*/
 
-const state = store.getState();
+/*const state = store.getState();
 const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
 console.log(visibleExpenses);
 
-console.log(store.getState());
+console.log(store.getState());*/
 
 const appRoot = document.getElementById('app');
 
