@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Expensify</title>
+      <link rel="icon" type="image/png" href="/images/favicon.png">
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="/bundle.js"></script>
+    <!-- For babel, the output folder is in public/scripts/app.js -- this is where we defined it to be (look at
+         package.json build-bable --out-file -->
+    <!-- Before webpack, we have to handle dependencies correctly, such as making sure script tags are in order
+         When we run webpack, we will end up with bundle.js file (bundle of all the .js) (compressed)
+         Webpack runs babel for us
+    -->
+  </body>
+</html>
