@@ -27,7 +27,6 @@ console.log(visibleExpenses);
 console.log(store.getState());*/
 
 const appRoot = document.getElementById('app');
-
 const jsx = (
     <Provider store={store}>
         <AppRouter/>
