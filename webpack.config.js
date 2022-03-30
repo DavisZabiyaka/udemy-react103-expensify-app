@@ -28,8 +28,8 @@ module.exports = (env) => {
                 loader: 'babel-loader',
                 test: /\.js$/,
                 exclude: /node_modules/,
-                query: {
-                    presets: ["es2015"]
+                options: {
+                    presets: ['env']
                 }
             }, {
                 test: /\.s?css$/,
