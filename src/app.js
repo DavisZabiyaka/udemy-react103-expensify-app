@@ -9,6 +9,8 @@ import getVisibleExpenses from './selectors/expenses';
 import {addExpense} from './actions/expenses';
 import {setTextFilter} from './actions/filters';
 import 'react-dates/lib/css/_datepicker.css';
+import './firebase/firebase';
+//import './playground/promises';
 
 const store = configureStore();
 /*store.dispatch(addExpense({description: 'Water Bill', note: 'Fixed', amount: 4500 }));
