@@ -4,6 +4,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
@@ -28,9 +29,6 @@ module.exports = (env) => {
                 loader: 'babel-loader',
                 test: /\.js$/,
                 exclude: /node_modules/,
-                options: {
-                    presets: ['env']
-                }
             }, {
                 test: /\.s?css$/,
                 use: CSSExtract.extract({
@@ -47,6 +45,13 @@ module.exports = (env) => {
         },
         plugins: [
             CSSExtract,
+            new UglifyJsPlugin({
+                test: /\.js$/,
+                sourceMap: true,
+                uglifyOptions: {
+                    compress: true
+                }
+            }),
             new webpack.DefinePlugin({
                 'process.env.FIREBASE_API_KEY': JSON.stringify(process.env.FIREBASE_API_KEY),
                 'process.env.FIREBASE_AUTH_DOMAIN': JSON.stringify(process.env.FIREBASE_AUTH_DOMAIN),
