@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "npm": "8.1.2"
+  },
   "scripts": {
     "serve": "live-server public --browser=CHROME -V",
     "build:dev": "webpack",
