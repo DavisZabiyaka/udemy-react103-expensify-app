@@ -49,7 +49,8 @@ module.exports = (env) => {
                 test: /\.js$/,
                 sourceMap: true,
                 uglifyOptions: {
-                    compress: true
+                    compress: true,
+                    warnings: false
                 }
             }),
             new webpack.DefinePlugin({
